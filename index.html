@@ -10,19 +10,20 @@
 
     <form>
         <lable for="name">Name of Student</lable><br>
-        <input id="name" type="text" name="name"><br>
+        <input id="name" type="text" name="name" required><br>
         <br>
         <label for="email">Email</label><br>
-        <input id="email" type="text" name="email"><br>
+        <input id="email" type="email" name="email" required><br>
         <br>
         <label for="age">Age</label><br>
-        <input id="age" type="text" name="age"><br>
+        <input id="age" type="text" name="age" required><br>
         <br>
         <label for="dateOfBirth">Date of Birth</label><br>
-        <input id="dateOfBirth" type="date" name="dateOfBirth"><br>
+        <input id="dateOfBirth" type="date" name="dateOfBirth" required><br>
         <br>
         <label for="Nationality">Nationality</label><br>
-        <select id="country" name="country" class="form-control">
+        <select id="country" name="country" required>
+            <option hidden selected>Select Country....</option>
             <option value="Afghanistan">Afghanistan</option>
             <option value="Åland Islands">Åland Islands</option>
             <option value="Albania">Albania</option>
@@ -270,7 +271,8 @@
         </select><br>
         <br>
         <label for="currentStatus">What is your curent status</label><br>
-        <select>
+        <select id="currentStatus" name="currentStatus" required>
+            <option hidden selected>Select One...</option>
             <option value="Student">Student</option>
             <option value="Employed">Employed</option>
             <option value="NotEmploy">Not Employed</option>
@@ -278,14 +280,15 @@
         </select><br>
         <br>
         <label for="LessonsType">What type of lessons are you looking for</label><br>
-        <select>
+        <select id="LessonsType" name="LessonsType" required>
+            <option hidden selected>Select One...</option>
             <option value="Online">Online</option>
             <option value="InPerson">In Person</option>
             <option value="BothComb">Online and In Person</option>
         </select><br>
         <br>
-        <label for="days">How many days do you want to learn</label><br>
-        <input id="days" type="text" name="days"><br>
+        <label for="days">How many days do you want to learn (1 - 5 days)</label><br>
+        <input id="days" type="number" min="1" max="5" name="days" required><br>
         <br>
         <label for="hearUs">Where did you hear us from?</label><br>
         <input id="hearUsOnline" type="checkbox" name="hearUsOnline">
